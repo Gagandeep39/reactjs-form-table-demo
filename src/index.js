@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.css';
 
 ReactDOM.render(
   <React.StrictMode>
+    <h1 className='display-3 container'>Employee Info</h1>
+    <hr></hr>
     <App />
   </React.StrictMode>,
   document.getElementById('root')

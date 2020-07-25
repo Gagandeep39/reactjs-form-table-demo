@@ -8,7 +8,8 @@ export default class Table extends Component {
       return <div></div>;
     } else {
       return (
-        <div>
+        <div className='container'>
+          <h3>Employee Data</h3>
           <table className='table'>
             <thead>
               <tr>

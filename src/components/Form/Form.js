@@ -25,6 +25,7 @@ export default class Form extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmitHandler} className='container'>
+        <h3>Add new Employee</h3>
         <div className='form-group'>
           <label for='name'>Name</label>
           <input type='text' name='name' className='form-control'></input>
