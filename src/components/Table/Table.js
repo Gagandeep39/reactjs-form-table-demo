@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 export default class Table extends Component {
+
   render() {
     if (this.props.employeeList.length == 0) {
       return <div></div>;
@@ -23,7 +24,7 @@ export default class Table extends Component {
                     <td> {employee.name} </td>
                     <td> {employee.job} </td>
                     <td>
-                      <button className='btn btn-primary'>Delete</button>
+                      <button className='btn btn-primary' onClick={() => this.props.deleteHandle(employee.id)}>Delete</button>
                     </td>
                   </tr>
                 );

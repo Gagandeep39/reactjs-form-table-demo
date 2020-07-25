@@ -21,10 +21,17 @@ class App extends Component {
     });
   };
 
+  deleteButtonHandler = (id) => {
+    let index = this.state.employees.findIndex(emp => emp.id === id);
+    let empArray = this.state.employees;
+    empArray.splice(index, 1);
+    this.setState({employees: empArray});
+  }
+
   render() {
     return (
       <div>
-        <Table employeeList={this.state.employees} />
+        <Table employeeList={this.state.employees} deleteHandle={this.deleteButtonHandler}/>
         <Form changeValue={this.submitValueHandler} />
       </div>
     );
