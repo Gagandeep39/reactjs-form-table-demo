@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default class Form extends Component {
   state = {
@@ -23,12 +24,18 @@ export default class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmitHandler}>
-        <label>Name</label>
-        <input type='text' name='name'></input>
-        <label>Job</label>
-        <input type='text' name='job'></input>
-        <button type='submit'>Add Employee</button>
+      <form onSubmit={this.onSubmitHandler} className='container'>
+        <div className='form-group'>
+          <label for='name'>Name</label>
+          <input type='text' name='name' className='form-control'></input>
+        </div>
+        <div class='form-group'>
+          <label for='job'>Job</label>
+          <input type='text' name='job' className='form-control'></input>
+        </div>
+        <button className='btn btn-primary' type='submit'>
+          Submit
+        </button>
       </form>
     );
   }
