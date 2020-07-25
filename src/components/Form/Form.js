@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
 
 export default class Form extends Component {
-  
+  state = {
+    counter: 1,
+  };
+
   onSubmitHandler = (event) => {
     event.preventDefault();
     if (event.target.name.value === '') alert('Name Cannot be Empty');
     else if (event.target.job.value === '') alert('Job Cannot be Empty');
     else {
-      this.props.changeValue(event.target.name.value, event.target.job.value);
+      this.props.changeValue(
+        event.target.name.value,
+        event.target.job.value,
+        this.state.counter
+      );
       event.target.name.value = '';
       event.target.job.value = '';
+      this.setState({ counter: (this.state.counter += 1) });
     }
   };
 
