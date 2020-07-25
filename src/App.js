@@ -1,24 +1,33 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from './components/Form/Form';
+import Table from './components/Table/Table';
 
 class App extends Component {
   state = {
-    name: '',
-    job: '',
+    employees: [
+      { id: 999, name: 'Gagan', job: 'Developer' },
+      { id: 99, name: 'Gallade', job: 'Developer' },
+    ],
   };
 
-  submitValueHandler = (name, job) => {
-    this.setState({
+  submitValueHandler = (name, job, id) => {
+    const emp = {
       name: name,
       job: job,
+      id: id,
+    };
+    let arr = [...this.state.employees];
+    arr.push(emp);
+    this.setState({
+      employees: arr,
     });
-    console.log('Added Data' + this.state.name);
   };
 
   render() {
     return (
       <div>
+        <Table employeeList={this.state.employees} />
         <Form changeValue={this.submitValueHandler} />
       </div>
     );
