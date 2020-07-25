@@ -5,10 +5,7 @@ import Table from './components/Table/Table';
 
 class App extends Component {
   state = {
-    employees: [
-      { id: 999, name: 'Gagan', job: 'Developer' },
-      { id: 99, name: 'Gallade', job: 'Developer' },
-    ],
+    employees: [],
   };
 
   submitValueHandler = (name, job, id) => {
