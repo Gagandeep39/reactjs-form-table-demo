@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 export default class Table extends Component {
 
   render() {
-    if (this.props.employeeList.length == 0) {
+    if (this.props.employeeList.length === 0) {
       return <div></div>;
     } else {
       return (
