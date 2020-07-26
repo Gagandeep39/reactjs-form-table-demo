@@ -18,9 +18,9 @@ export default class Form extends Component {
       );
       event.target.name.value = '';
       event.target.job.value = '';
-      let count = this.state.counter;
+      let count = this.state.counter + 1;
 
-      this.setState({ counter: count++ });
+      this.setState({ counter: count });
     }
   };
 

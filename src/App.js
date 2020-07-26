@@ -14,8 +14,7 @@ class App extends Component {
       job: job,
       id: id,
     };
-    let arr = [...this.state.employees];
-    arr.push(emp);
+    let arr = [...this.state.employees, emp];
     this.setState({
       employees: arr,
     });
